@@ -4,7 +4,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>X Clone</title>
+    <title>Voir le Tweet - X Clone</title>
     <meta name="description" content="Clone de X (Twitter) avec HTML, Tailwind et JavaScript" />
     <meta name="author" content="Lovable" />
     <meta property="og:image" content="/og-image.png" />
@@ -14,7 +14,7 @@
 
   <body class="bg-gray-100 dark:bg-black text-black dark:text-white">
     <div class="flex min-h-screen">
-      <!-- Sidebar -->
+      <!-- Sidebar - identique aux autres pages -->
       <aside class="w-20 md:w-64 h-screen sticky top-0 flex flex-col p-4 space-y-4 bg-white dark:bg-black">
         <!-- Logo -->
         <div class="p-2 mb-4">
@@ -27,7 +27,7 @@
         
         <!-- Navigation -->
         <nav class="flex flex-col space-y-2">
-          <a href="index.html" class="flex items-center space-x-4 p-3 rounded-full transition-colors hover:bg-gray-200 dark:hover:bg-gray-800 font-bold">
+          <a href="index.html" class="flex items-center space-x-4 p-3 rounded-full transition-colors hover:bg-gray-200 dark:hover:bg-gray-800">
             <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6" />
             </svg>
@@ -81,12 +81,91 @@
       
       <!-- Main content -->
       <main class="flex-1 border-x border-gray-200 dark:border-gray-800 min-w-0">
-        <!-- Header -->
-        <header class="p-4 border-b border-gray-200 dark:border-gray-800 font-bold text-xl sticky top-0 bg-white/80 dark:bg-black/80 backdrop-blur-sm z-10">
-          Accueil
-        </header>
+        <!-- Header with back button -->
+        <div class="sticky top-0 z-10 bg-white/80 dark:bg-black/80 backdrop-blur-sm">
+          <div class="p-4 flex items-center space-x-4">
+            <a href="javascript:history.back()" class="rounded-full p-2 hover:bg-gray-200 dark:hover:bg-gray-800">
+              <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 19l-7-7m0 0l7-7m-7 7h18" />
+              </svg>
+            </a>
+            <h1 class="font-bold text-xl">Tweet</h1>
+          </div>
+        </div>
         
-        <!-- Tweet composer -->
+        <!-- Main Tweet -->
+        <div class="p-4 border-b border-gray-200 dark:border-gray-800">
+          <div class="flex space-x-3">
+            <a href="profile.html">
+              <img
+                src="https://i.pravatar.cc/150?img=1"
+                alt="Jonathan Doe"
+                class="w-12 h-12 rounded-full"
+              />
+            </a>
+            <div class="flex-1 min-w-0">
+              <div class="flex flex-wrap items-center">
+                <a href="profile.html" class="font-bold hover:underline mr-1">Jonathan Doe</a>
+                <span class="text-gray-500 mr-1">@jonathandoe</span>
+              </div>
+              <p class="mt-2 text-lg text-gray-900 dark:text-gray-100">
+                Développer une application avec HTML, Tailwind et JavaScript est une excellente combinaison pour des résultats rapides et élégants!
+              </p>
+              
+              <div class="my-4 text-gray-500">
+                <time datetime="2023-09-10T12:35:00">12:35 · 10 sept. 2023</time> · <span class="text-blue-500">X Web App</span>
+              </div>
+              
+              <div class="flex border-y border-gray-200 dark:border-gray-800 py-3 my-2">
+                <div class="mr-6">
+                  <span class="font-bold">24</span> <span class="text-gray-500">Retweets</span>
+                </div>
+                <div class="mr-6">
+                  <span class="font-bold">4</span> <span class="text-gray-500">Citations</span>
+                </div>
+                <div>
+                  <span class="font-bold">98</span> <span class="text-gray-500">J'aime</span>
+                </div>
+              </div>
+              
+              <div class="flex justify-between py-3">
+                <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500 group">
+                  <div class="p-2 rounded-full group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                    </svg>
+                  </div>
+                </button>
+                
+                <button class="flex items-center space-x-1 text-gray-500 hover:text-green-500 group">
+                  <div class="p-2 rounded-full group-hover:bg-green-100 dark:group-hover:bg-green-900/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                    </svg>
+                  </div>
+                </button>
+                
+                <button class="flex items-center space-x-1 text-gray-500 hover:text-pink-500 group">
+                  <div class="p-2 rounded-full group-hover:bg-pink-100 dark:group-hover:bg-pink-900/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                    </svg>
+                  </div>
+                </button>
+                
+                <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500 group">
+                  <div class="p-2 rounded-full group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                    </svg>
+                  </div>
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <!-- Tweet compose reply -->
         <div class="p-4 border-b border-gray-200 dark:border-gray-800">
           <div class="flex space-x-4">
             <img
@@ -96,9 +175,8 @@
             />
             <div class="flex-1">
               <textarea
-                id="tweet-composer"
-                placeholder="Quoi de neuf ?"
-                class="w-full bg-transparent border-b border-gray-200 dark:border-gray-800 outline-none resize-none min-h-[100px] pb-3"
+                placeholder="Tweeter votre réponse"
+                class="w-full bg-transparent outline-none resize-none min-h-[80px]"
               ></textarea>
               
               <div class="flex items-center justify-between mt-4">
@@ -113,91 +191,22 @@
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
                   </button>
-                  <button class="p-2 rounded-full hover:bg-blue-100 dark:hover:bg-blue-900/30">
-                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z" />
-                      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z" />
-                    </svg>
-                  </button>
                 </div>
                 
                 <button
-                  id="tweet-button"
                   disabled
                   class="rounded-full bg-blue-500 hover:bg-blue-600 text-white px-5 py-2 font-bold disabled:opacity-50 disabled:cursor-not-allowed"
                 >
-                  Tweeter
+                  Répondre
                 </button>
               </div>
             </div>
           </div>
         </div>
         
-        <!-- Tweet feed -->
-        <div id="tweet-feed">
-          <!-- Tweet 1 -->
-          <div class="p-4 border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
-            <div class="flex space-x-3">
-              <a href="profile.html">
-                <img
-                  src="https://i.pravatar.cc/150?img=1"
-                  alt="Jonathan Doe"
-                  class="w-12 h-12 rounded-full"
-                />
-              </a>
-              <div class="flex-1 min-w-0">
-                <div class="flex items-center space-x-1">
-                  <a href="profile.html" class="font-bold hover:underline">Jonathan Doe</a>
-                  <span class="text-gray-500">@jonathandoe</span>
-                  <span class="text-gray-500">·</span>
-                  <span class="text-gray-500">2h</span>
-                </div>
-                
-                <a href="post.html?id=1">
-                  <p class="mt-1 text-gray-900 dark:text-gray-100">Développer une application avec HTML, Tailwind et JavaScript est une excellente combinaison pour des résultats rapides et élégants!</p>
-                </a>
-                
-                <div class="flex justify-between mt-3 max-w-md">
-                  <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500 group">
-                    <div class="p-2 rounded-full group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
-                      </svg>
-                    </div>
-                    <span>12</span>
-                  </button>
-                  
-                  <button class="flex items-center space-x-1 text-gray-500 hover:text-green-500 group">
-                    <div class="p-2 rounded-full group-hover:bg-green-100 dark:group-hover:bg-green-900/30">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
-                      </svg>
-                    </div>
-                    <span>24</span>
-                  </button>
-                  
-                  <button class="flex items-center space-x-1 text-gray-500 hover:text-pink-500 group">
-                    <div class="p-2 rounded-full group-hover:bg-pink-100 dark:group-hover:bg-pink-900/30">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
-                      </svg>
-                    </div>
-                    <span>98</span>
-                  </button>
-                  
-                  <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500 group">
-                    <div class="p-2 rounded-full group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
-                      </svg>
-                    </div>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
-          
-          <!-- Tweet 2 -->
+        <!-- Replies -->
+        <div class="replies">
+          <!-- Reply 1 -->
           <div class="p-4 border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
             <div class="flex space-x-3">
               <a href="profile.html">
@@ -212,18 +221,15 @@
                   <a href="profile.html" class="font-bold hover:underline">Marie Durand</a>
                   <span class="text-gray-500">@mariedurand</span>
                   <span class="text-gray-500">·</span>
-                  <span class="text-gray-500">4h</span>
+                  <span class="text-gray-500">3h</span>
+                </div>
+                <div class="text-gray-500 mb-2">
+                  En réponse à <a href="#" class="text-blue-500">@jonathandoe</a>
                 </div>
                 
-                <a href="post.html?id=2">
-                  <p class="mt-1 text-gray-900 dark:text-gray-100">Je viens de découvrir ce nouveau réseau social! L'interface ressemble beaucoup à celle de Twitter, j'adore!</p>
-                  
-                  <img
-                    src="https://images.unsplash.com/photo-1611162617213-7d7a39e9b1d7?w=800&auto=format&fit=crop"
-                    alt="Tweet media"
-                    class="mt-3 rounded-2xl max-h-96 w-full object-cover"
-                  />
-                </a>
+                <p class="text-gray-900 dark:text-gray-100">
+                  Tout à fait d'accord ! J'utilise cette combinaison depuis quelques mois et j'adore la flexibilité et la rapidité de développement.
+                </p>
                 
                 <div class="flex justify-between mt-3 max-w-md">
                   <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500 group">
@@ -232,7 +238,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
                       </svg>
                     </div>
-                    <span>5</span>
+                    <span>3</span>
                   </button>
                   
                   <button class="flex items-center space-x-1 text-gray-500 hover:text-green-500 group">
@@ -241,7 +247,7 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
                       </svg>
                     </div>
-                    <span>8</span>
+                    <span>1</span>
                   </button>
                   
                   <button class="flex items-center space-x-1 text-gray-500 hover:text-pink-500 group">
@@ -250,7 +256,72 @@
                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                       </svg>
                     </div>
-                    <span>37</span>
+                    <span>12</span>
+                  </button>
+                  
+                  <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500 group">
+                    <div class="p-2 rounded-full group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.368 2.684 3 3 0 00-5.368-2.684z" />
+                      </svg>
+                    </div>
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <!-- Reply 2 -->
+          <div class="p-4 border-b border-gray-200 dark:border-gray-800 hover:bg-gray-50 dark:hover:bg-gray-900 transition-colors">
+            <div class="flex space-x-3">
+              <a href="profile.html">
+                <img
+                  src="https://i.pravatar.cc/150?img=8"
+                  alt="Alex Martin"
+                  class="w-12 h-12 rounded-full"
+                />
+              </a>
+              <div class="flex-1 min-w-0">
+                <div class="flex items-center space-x-1">
+                  <a href="profile.html" class="font-bold hover:underline">Alex Martin</a>
+                  <span class="text-gray-500">@alexm</span>
+                  <span class="text-gray-500">·</span>
+                  <span class="text-gray-500">4h</span>
+                </div>
+                <div class="text-gray-500 mb-2">
+                  En réponse à <a href="#" class="text-blue-500">@jonathandoe</a>
+                </div>
+                
+                <p class="text-gray-900 dark:text-gray-100">
+                  As-tu des conseils à donner pour quelqu'un qui débute avec Tailwind CSS ? Je trouve que la courbe d'apprentissage est un peu raide.
+                </p>
+                
+                <div class="flex justify-between mt-3 max-w-md">
+                  <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500 group">
+                    <div class="p-2 rounded-full group-hover:bg-blue-100 dark:group-hover:bg-blue-900/30">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z" />
+                      </svg>
+                    </div>
+                    <span>7</span>
+                  </button>
+                  
+                  <button class="flex items-center space-x-1 text-gray-500 hover:text-green-500 group">
+                    <div class="p-2 rounded-full group-hover:bg-green-100 dark:group-hover:bg-green-900/30">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15" />
+                      </svg>
+                    </div>
+                    <span>0</span>
+                  </button>
+                  
+                  <button class="flex items-center space-x-1 text-gray-500 hover:text-pink-500 group">
+                    <div class="p-2 rounded-full group-hover:bg-pink-100 dark:group-hover:bg-pink-900/30">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
+                      </svg>
+                    </div>
+                    <span>4</span>
                   </button>
                   
                   <button class="flex items-center space-x-1 text-gray-500 hover:text-blue-500 group">
@@ -283,88 +354,31 @@
           />
         </div>
         
-        <!-- Trending -->
+        <!-- Related Tweets -->
         <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
-          <h2 class="text-xl font-bold mb-4">Tendances pour vous</h2>
+          <h2 class="text-xl font-bold mb-4">Tweets similaires</h2>
           <div class="space-y-4">
-            <div class="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">
-              <p class="text-xs text-gray-500">Technologie</p>
-              <p class="font-bold">#React</p>
-              <p class="text-xs text-gray-500">10.5K Tweets</p>
+            <div class="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 p-3 rounded">
+              <div class="flex items-center space-x-2 mb-1">
+                <img src="https://i.pravatar.cc/150?img=9" alt="User" class="w-8 h-8 rounded-full" />
+                <div>
+                  <p class="font-bold text-sm">Lucas Dupont</p>
+                  <p class="text-gray-500 text-xs">@lucasd</p>
+                </div>
+              </div>
+              <p class="text-sm">Tailwind CSS est vraiment incroyable pour la productivité. Je ne reviendrais jamais en arrière!</p>
             </div>
-            <div class="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">
-              <p class="text-xs text-gray-500">Sport</p>
-              <p class="font-bold">#PSG</p>
-              <p class="text-xs text-gray-500">105K Tweets</p>
-            </div>
-            <div class="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">
-              <p class="text-xs text-gray-500">Business</p>
-              <p class="font-bold">#Bitcoin</p>
-              <p class="text-xs text-gray-500">325K Tweets</p>
-            </div>
-            <div class="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 p-2 rounded">
-              <p class="text-xs text-gray-500">Divertissement</p>
-              <p class="font-bold">#Netflix</p>
-              <p class="text-xs text-gray-500">43K Tweets</p>
+            <div class="cursor-pointer hover:bg-gray-200 dark:hover:bg-gray-700 p-3 rounded">
+              <div class="flex items-center space-x-2 mb-1">
+                <img src="https://i.pravatar.cc/150?img=10" alt="User" class="w-8 h-8 rounded-full" />
+                <div>
+                  <p class="font-bold text-sm">Sarah Martin</p>
+                  <p class="text-gray-500 text-xs">@sarahm</p>
+                </div>
+              </div>
+              <p class="text-sm">HTML, CSS et JavaScript: la sainte trinité du développement web. Simple mais puissant!</p>
             </div>
           </div>
-          <a href="#" class="text-blue-500 mt-2 block">Voir plus</a>
-        </div>
-        
-        <!-- Who to follow -->
-        <div class="bg-gray-50 dark:bg-gray-800 rounded-xl p-4">
-          <h2 class="text-xl font-bold mb-4">Qui suivre</h2>
-          <div class="space-y-4">
-            <div class="flex items-center justify-between">
-              <div class="flex items-center space-x-2">
-                <img
-                  src="https://i.pravatar.cc/150?img=1"
-                  alt="Emma Smith"
-                  class="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p class="font-bold text-sm">Emma Smith</p>
-                  <p class="text-gray-500 text-sm">@emmasmith</p>
-                </div>
-              </div>
-              <button class="rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 text-sm font-bold px-4 py-1">
-                Suivre
-              </button>
-            </div>
-            <div class="flex items-center justify-between">
-              <div class="flex items-center space-x-2">
-                <img
-                  src="https://i.pravatar.cc/150?img=2"
-                  alt="James Brown"
-                  class="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p class="font-bold text-sm">James Brown</p>
-                  <p class="text-gray-500 text-sm">@jamesbrown</p>
-                </div>
-              </div>
-              <button class="rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 text-sm font-bold px-4 py-1">
-                Suivre
-              </button>
-            </div>
-            <div class="flex items-center justify-between">
-              <div class="flex items-center space-x-2">
-                <img
-                  src="https://i.pravatar.cc/150?img=3"
-                  alt="Olivia Johnson"
-                  class="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <p class="font-bold text-sm">Olivia Johnson</p>
-                  <p class="text-gray-500 text-sm">@oliviaj</p>
-                </div>
-              </div>
-              <button class="rounded-full bg-black text-white dark:bg-white dark:text-black hover:bg-gray-800 dark:hover:bg-gray-200 text-sm font-bold px-4 py-1">
-                Suivre
-              </button>
-            </div>
-          </div>
-          <a href="#" class="text-blue-500 mt-2 block">Voir plus</a>
         </div>
       </div>
     </div>
